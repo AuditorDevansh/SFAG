@@ -1,24 +1,27 @@
 # Salesforce Architect Group, Noida
 
-Community website for the Salesforce Architect Group, Noida (India): about, leadership, volunteers, events, a Twibbonize-style Poster Studio, and a link to the Jovvix quiz.
+Next.js website for the Salesforce Architect Group, Noida (India): community information, events, a browser-based Poster Studio, and an SFAG-branded quiz experience at `/quiz`.
 
-It is a static site with no build step. Images are stored separately in `assets/` and below-the-fold photos load lazily.
+The quiz page is a branded entry point to the existing quiz service; live games and public quizzes continue to run there. Set `NEXT_PUBLIC_QUIZ_SERVICE_URL` to change its base URL.
+The admin portal links to the existing platform’s authenticated quiz creation, library, live session, category, and reports screens. Sign-in is handled by that service; this static SFAG site does not store admin credentials.
 
 ## Project structure
-- `index.html`: page content, metadata, and structured data
-- `css/styles.css`: site theme, layout, and responsive styles
-- `js/config.js`: event, volunteer, topic, quiz, and poster content
-- `js/site.js`: page content, navigation, theme, and topic interactions
-- `js/poster-studio.js`: poster canvas, photo controls, and sharing
-- `assets/`: community and event images
-
-The JavaScript files are regular browser scripts, loaded in dependency order: `config.js`, `poster-studio.js`, then `site.js`. Keep them as separate scripts when adding features; no bundler or local install is required.
+- `app/page.js`: community homepage
+- `app/quiz/page.js`: SFAG Quiz landing page and live-code form
+- `app/admin/page.js`: quiz management portal
+- `app/admin/login/page.js`: admin sign-in handoff to the quiz service
+- `app/layout.js`: site metadata, fonts, and structured data
+- `css/styles.css`: community site theme and layout
+- `public/js/`: browser scripts for the existing Poster Studio and homepage interactions
+- `public/assets/`: community and event images
 
 ## Run locally
-Open `index.html` in a browser.
+1. Install dependencies with `npm install`.
+2. Copy `.env.example` to `.env.local` and set the quiz-service URL if needed.
+3. Run `npm run dev` and open the local URL printed by Next.js.
 
 ## Deploy with GitHub Pages
-Settings → Pages → Deploy from a branch → `main` / `(root)`.
+This repository is configured for GitHub Pages from `main` / root. Run `npm run build:pages` to build the static export and copy it to the repository root, then commit and push the changes. `public/CNAME` preserves the custom domain, and `public/.nojekyll` keeps Next.js assets from being processed by Jekyll.
 
 ## Update content
-Edit `js/config.js` to update the quiz URL, Twibify campaign, upcoming events, poster details, volunteers, or topic descriptions. Keep image paths relative to the project root (for example, `assets/event-photo.jpg`).
+Edit `public/js/config.js` to update the Twibify campaign, upcoming events, poster details, volunteers, or topic descriptions. Keep image paths in the format `/assets/event-photo.jpg`.

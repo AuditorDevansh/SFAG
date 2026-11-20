@@ -1,5 +1,5 @@
 window.SAG_CONFIG = Object.freeze({
-  quizUrl: "https://jovvix.com/",
+  quizUrl: "/quiz/",
   twibifyUrl: "https://twibify.com/campaign/test1",
   upcomingEvents: [],
   poster: {
@@ -12,7 +12,7 @@ window.SAG_CONFIG = Object.freeze({
     ["Yathartha Gaurav", "Lead volunteer", "assets/volunteer-yathartha-gaurav.jpg", true],
     ["Suneel Kanaujiya", "Lead volunteer", "assets/volunteer-suneel-kanaujiya.jpg", true],
     ["Arpan", "Volunteer", "assets/volunteer-arpan.jpg"],
-    ["Devansh Mishra", "Volunteer", "assets/volunteer-devansh-mishra.jpg"],
+    ["Devansh Mishra", "Volunteer", "assets/volunteer-devansh-mishra.png"],
     ["Garima Mishra", "Volunteer", "assets/volunteer-garima-mishra.jpg"],
     ["Nischay", "Volunteer", "assets/volunteer-nischay.jpg"],
     ["Riddhi Jaiswal", "Volunteer", "assets/volunteer-riddhi-jaiswal.jpg"],

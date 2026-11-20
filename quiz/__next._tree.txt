@@ -1,0 +1,7 @@
+:HL["/_next/static/chunks/355roqut5z2t6.css","style"]
+:HL["/_next/static/chunks/2f9c_bo2-q2zg.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap","style"]
+:HL["/assets/community-logo.jpg","image"]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":"quiz","h":96,"c":"$Q2"}]]
+0:{"b":"RkAZJbgZx0K5DiGx7qDLl","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

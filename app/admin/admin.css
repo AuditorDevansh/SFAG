@@ -1,0 +1,147 @@
+.sfag-admin {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 82% 18%, rgba(6, 165, 154, .1), transparent 36%),
+    var(--bg);
+}
+.sfag-admin-header {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 18px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+.sfag-admin-header .brand span {
+  display: inline;
+}
+.sfag-admin-main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 72px 28px 100px;
+}
+.sfag-admin-heading {
+  max-width: 720px;
+  margin-bottom: 36px;
+}
+.sfag-admin-heading h1 {
+  font-size: clamp(40px, 6vw, 64px);
+}
+.sfag-admin-heading p {
+  font-size: 17px;
+}
+.sfag-admin-auth {
+  margin: 28px 0 42px;
+  padding: 28px clamp(22px, 4vw, 40px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-radius: 24px;
+  background: var(--lead);
+}
+.sfag-admin-auth h2 {
+  margin: 4px 0;
+  font-size: clamp(21px, 3vw, 28px);
+}
+.sfag-admin-auth p {
+  margin: 0;
+  font-size: 14px;
+}
+.sfag-admin-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.sfag-admin-card {
+  min-height: 220px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid rgba(1, 118, 211, .13);
+  border-radius: 24px;
+  background: var(--surf);
+  box-shadow: var(--sh);
+}
+.sfag-admin-card > span {
+  color: var(--blue);
+  font: 800 13px "Plus Jakarta Sans", sans-serif;
+}
+.sfag-admin-card h2 {
+  margin: 14px 0 8px;
+  font-size: 22px;
+}
+.sfag-admin-card p {
+  margin: 0 0 20px;
+  font-size: 14px;
+}
+.sfag-admin-card .btn {
+  margin-top: auto;
+}
+.sfag-admin-login {
+  max-width: 620px;
+  margin: 28px auto;
+  padding: clamp(28px, 6vw, 52px);
+  border: 1px solid rgba(1, 118, 211, .13);
+  border-radius: 30px;
+  background: var(--surf);
+  box-shadow: var(--sh2);
+}
+.sfag-admin-login h1 {
+  margin-top: 12px;
+  font-size: clamp(34px, 6vw, 54px);
+}
+.sfag-admin-login > p {
+  margin-bottom: 24px;
+}
+.sfag-admin-login .btn {
+  width: 100%;
+  text-align: center;
+}
+.sfag-admin-security-note {
+  margin: 18px 0 0 !important;
+  font-size: 13px !important;
+}
+.sfag-admin-footer {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 28px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--mute);
+  font-size: 13px;
+}
+.sfag-admin-footer a {
+  font-weight: 600;
+  text-decoration: none;
+}
+@media (max-width: 850px) {
+  .sfag-admin-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .sfag-admin-header {
+    padding-inline: 18px;
+  }
+  .sfag-admin-header .brand span {
+    display: none;
+  }
+  .sfag-admin-main {
+    padding: 52px 18px 70px;
+  }
+  .sfag-admin-auth {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .sfag-admin-grid {
+    grid-template-columns: 1fr;
+  }
+  .sfag-admin-footer {
+    padding-inline: 18px;
+  }
+}

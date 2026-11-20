@@ -52,8 +52,13 @@
 
     [quizButton, navigationButton].forEach((link) => {
       link.href = quizUrl;
-      link.target = "_blank";
-      link.rel = "noopener";
+      if (quizUrl.startsWith("/")) {
+        link.removeAttribute("target");
+        link.removeAttribute("rel");
+      } else {
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+      }
     });
   }
 
